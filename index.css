@@ -1,0 +1,49 @@
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.area {
+  width: 50%;
+  height: 30vh;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 0 auto;
+  background-color: rgb(202, 229, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px;
+}
+@media screen and (max-width: 800px) {
+  .area {
+    width: 90%;
+  }
+}
+.area:hover {
+  background-color: rgb(226, 241, 255);
+}
+#uploadedfiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: baseline;
+  overflow: auto;
+}
+.thumbnail {
+  width: 100px;
+  max-width: 100%;
+  height: 100px;
+}
+.thumbnail-bg {
+  background-color: white;
+  padding: 6px;
+}
+#area-text {
+  text-align: center;
+}
