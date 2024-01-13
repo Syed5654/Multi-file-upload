@@ -43,6 +43,21 @@
 .thumbnail-bg {
   background-color: white;
   padding: 6px;
+  position: relative;
+}
+.remove-text{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.34);
+  padding: 6px 0;
+  color: white;
+  text-align: center;
+  z-index: 10;
+}
+.remove-text:hover{
+  text-decoration: underline;
 }
 #area-text {
   text-align: center;

@@ -9,19 +9,34 @@ function uploadFiles(event) {
   } else {
     files.push(...fileInput.files);
   }
+  displayThumbnail();
+  if (files.length > 0) {
+    text.style.display = "none";
+  } else {
+    text.style.display = "block";
+  }
+}
+
+function displayThumbnail() {
+  fileWrapper.innerHTML = "";
   for (let i = 0; i < files.length; i++) {
     const reader = new FileReader();
     reader.onload = function (e) {
       fileWrapper.innerHTML += `
-      <div class="thumbnail-bg"><img src="${e.target.result}" class="thumbnail"/><span class="remove-text">Remove</span></div>`;
+      <div class="thumbnail-bg"><img src="${e.target.result}" class="thumbnail"/><span class="remove-text" onclick="removeFile(${i})">Remove</span></div>`;
     };
     reader.readAsDataURL(files[i]);
-  }
-  if (files) {
-    text.remove();
   }
 }
 
 function openFiles() {
   fileInput.click();
+}
+
+function removeFile(i) {
+  files.splice(i, 1);
+  displayThumbnail();
+  if (files.length === 0) {
+    text.style.display = "block";
+  }
 }
