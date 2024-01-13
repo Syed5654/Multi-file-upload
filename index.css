@@ -24,9 +24,6 @@
     width: 90%;
   }
 }
-.area:hover {
-  background-color: rgb(226, 241, 255);
-}
 #uploadedfiles {
   display: flex;
   flex-wrap: wrap;
@@ -61,4 +58,11 @@
 }
 #area-text {
   text-align: center;
+}
+
+.click-here-btn{
+  color: rgb(0, 102, 255);
+}
+.click-here-btn:hover{
+ text-decoration: underline;
 }

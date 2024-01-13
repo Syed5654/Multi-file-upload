@@ -12,9 +12,8 @@
         class="area"
         ondrop="uploadFiles(event)"
         ondragover="event.preventDefault()"
-        onclick="openFiles()"
       >
-        <h2 id="area-text">Drag and Drop files here <br> Or Click here</h2>
+        <h2 id="area-text">Drag and Drop files here <br> Or <span onclick="openFiles()" class="click-here-btn">Click here</span></h2>
         <div id="uploadedfiles"></div>
         <input
           type="file"
